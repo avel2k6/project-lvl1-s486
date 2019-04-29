@@ -1,3 +1,6 @@
 #!/usr/bin/env node
+import * as main from '..';
 
-console.log('Welcome to the Brain Games!');
+main.welcome();
+const userName = main.askName();
+main.hello(userName);
