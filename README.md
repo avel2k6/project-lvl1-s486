@@ -4,8 +4,12 @@
 ### Autor: Bykov Slava
 ____________________________________________________
 ## Описание
-Репозиторий с первым этапом учебного проета по професии JS-FrontEnd
+Репозиторий с первым этапом учебного проекта по професии JS-FrontEnd
 
 git: https://github.com/avel2k6/project-lvl1-s486
 
 npm: https://www.npmjs.com/package/braingames-avel2k6  
+
+## Brain-even
+
+[![asciicast](https://asciinema.org/a/S1hPQvhGqxvd6OjbU3avyP3UP.svg)](https://asciinema.org/a/S1hPQvhGqxvd6OjbU3avyP3UP)
