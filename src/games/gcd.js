@@ -1,5 +1,5 @@
 import {
-  makeGame, echo, answer, random,
+  makeGame, random,
 } from '..';
 
 const divider = (n1, n2) => { // Алгоритм Евклида для нахождения НОД
@@ -19,14 +19,7 @@ const gcdQuestion = () => { // Поиск НОД: если правильно у
   const number1 = random(100);
   const number2 = random(100);
   const targetAnswer = divider(number1, number2);
-  echo(`Question: ${number1} ${number2}`);
-  const userAnswer = answer();
-  if (targetAnswer === userAnswer * 1) {
-    echo('Correct!');
-    return true;
-  }
-  echo(`'${userAnswer}' is wrong answer ;(. Correct answer was '${targetAnswer}'`);
-  return false;
+  return [`${number1} ${number2}`, targetAnswer];
 };
 
 const gcdGame = () => makeGame(gcdQuestion, 'Find the greatest common divisor of given numbers.');

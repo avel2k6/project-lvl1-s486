@@ -22,11 +22,25 @@ const startGame = (rules = '') => { // Приветствуем пользова
   return userName;
 };
 
-const makeGame = (func, rules) => { // Игра на поиск четного числа
+const ask = (func) => { // Задаем вопрос на основе входящей функции
+  const qestion = func;
+  const qestionStr = qestion[0]; // От функции мы ждем строковый вопрос
+  const qestionTarget = qestion[1]; // И целевой ответ
+  echo(`Question: ${qestionStr}`);
+  const userAnswer = answer(); // Приводим ответ к числу
+  if (`${qestionTarget}` === userAnswer) {
+    echo('Correct!');
+    return true;
+  }
+  echo(`'${userAnswer}' is wrong answer ;(. Correct answer was '${qestionTarget}'`);
+  return false;
+};
+
+const makeGame = (func, rules) => { // Основной игровой движок
   const userName = startGame(rules);
   let i = 3; // Задаем количетво вопросов в игре
   while (i) {
-    if (func() === false) { // Если ответ неверен, завершаем опрос
+    if (ask(func()) === false) { // Если ответ неверен, завершаем опрос
       echo(`Let's try again, ${userName}!`);
       return false;
     }
@@ -37,5 +51,5 @@ const makeGame = (func, rules) => { // Игра на поиск четного �
 };
 
 export {
-  startGame, makeGame, echo, answer, random,
+  startGame, makeGame, random,
 };

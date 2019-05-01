@@ -1,5 +1,5 @@
 import {
-  makeGame, echo, answer, random,
+  makeGame, random,
 } from '..';
 
 const summ = (x, y) => [`${x} + ${y}`, x + y];
@@ -22,14 +22,7 @@ const calcQuestion = () => { // Проверка калькулятора: ес�
     default:
       target = summ(number1, number2);
   }
-  echo(`Question: ${target[0]}`);
-  const userAnswer = answer(); // Приводим ответ к числу
-  if (target[1] === userAnswer * 1) {
-    echo('Correct!');
-    return true;
-  }
-  echo(`'${userAnswer}' is wrong answer ;(. Correct answer was '${target[1]}'`);
-  return false;
+  return [target[0], target[1]];
 };
 
 const calcGame = () => makeGame(calcQuestion, 'What is the result of the expression?');
