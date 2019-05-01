@@ -12,18 +12,7 @@ const hello = str => echo(`Hello, ${str}`);
 
 // Games functions
 const random = x => Math.floor(Math.random() * x); // Рандомизатор
-const evenQuestion = () => { // Проверка четности: если правильно угадана, возвращаем true
-  const targetNumber = random(30);
-  const targetAnswer = targetNumber % 2 === 0 ? 'yes' : 'no';
-  echo(`Question: ${targetNumber}`);
-  const userAnswer = answer();
-  if (targetAnswer === userAnswer) {
-    echo('Correct!');
-    return true;
-  }
-  echo(`'${userAnswer}' is wrong answer ;(. Correct answer was '${targetAnswer}'`);
-  return false;
-};
+
 
 // Bin functions
 const startGame = (rules = '') => { // Приветствуем пользователя и показывае правила игры, если они заданы
@@ -33,11 +22,11 @@ const startGame = (rules = '') => { // Приветствуем пользова
   return userName;
 };
 
-const evenGame = () => { // Игра на поиск четного числа
-  const userName = startGame('Answer "yes" if number even otherwise answer "no"');
+const makeGame = (func, rules) => { // Игра на поиск четного числа
+  const userName = startGame(rules);
   let i = 3; // Задаем количетво вопросов в игре
   while (i) {
-    if (evenQuestion() === false) { // Если ответ неверен, завершаем опрос
+    if (func() === false) { // Если ответ неверен, завершаем опрос
       echo(`Let's try again, ${userName}!`);
       return false;
     }
@@ -47,4 +36,6 @@ const evenGame = () => { // Игра на поиск четного числа
   return true;
 };
 
-export { startGame, evenGame };
+export {
+  startGame, makeGame, echo, answer, random,
+};
