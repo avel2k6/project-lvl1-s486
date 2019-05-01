@@ -10,6 +10,16 @@ git: https://github.com/avel2k6/project-lvl1-s486
 
 npm: https://www.npmjs.com/package/braingames-avel2k6  
 
+## Installation
+
+```
+sudo npm install -g braingames-avel2k6
+```
+
 ## Brain-even
 
 [![asciicast](https://asciinema.org/a/S1hPQvhGqxvd6OjbU3avyP3UP.svg)](https://asciinema.org/a/S1hPQvhGqxvd6OjbU3avyP3UP)
+
+## Brain-calc
+
+[![asciicast](https://asciinema.org/a/01KLHYmeL2iMs4tN6ooVQ054O.svg)](https://asciinema.org/a/01KLHYmeL2iMs4tN6ooVQ054O)
