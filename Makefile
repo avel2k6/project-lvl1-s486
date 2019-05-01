@@ -9,6 +9,9 @@ game-even:
 game-calc:
 	npx babel-node src/bin/brain-calc.js
 
+game-gcd:
+	npx babel-node src/bin/brain-gcd.js	
+
 publish:
 	npm publish
 

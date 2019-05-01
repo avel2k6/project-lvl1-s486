@@ -23,3 +23,7 @@ sudo npm install -g braingames-avel2k6
 ## Brain-calc
 
 [![asciicast](https://asciinema.org/a/01KLHYmeL2iMs4tN6ooVQ054O.svg)](https://asciinema.org/a/01KLHYmeL2iMs4tN6ooVQ054O)
+
+## Brain-gcd
+
+[![asciicast](https://asciinema.org/a/xATv8znEBxJy3AjwOeliOSY2b.svg)](https://asciinema.org/a/xATv8znEBxJy3AjwOeliOSY2b)
