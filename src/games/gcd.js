@@ -29,6 +29,6 @@ const gcdQuestion = () => { // Поиск НОД: если правильно у
   return false;
 };
 
-const evenGcd = () => makeGame(gcdQuestion, 'Find the greatest common divisor of given numbers.');
+const gcdGame = () => makeGame(gcdQuestion, 'Find the greatest common divisor of given numbers.');
 
-export default evenGcd;
+export default gcdGame;
