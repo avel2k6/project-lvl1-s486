@@ -27,3 +27,7 @@ sudo npm install -g braingames-avel2k6
 ## Brain-gcd
 
 [![asciicast](https://asciinema.org/a/xATv8znEBxJy3AjwOeliOSY2b.svg)](https://asciinema.org/a/xATv8znEBxJy3AjwOeliOSY2b)
+
+## Brain-progression
+
+[![asciicast](https://asciinema.org/a/hY1NiM5u5LAkQ2zWNEOF0Lt3n.svg)](https://asciinema.org/a/hY1NiM5u5LAkQ2zWNEOF0Lt3n)

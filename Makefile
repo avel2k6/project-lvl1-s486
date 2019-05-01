@@ -10,7 +10,10 @@ game-calc:
 	npx babel-node src/bin/brain-calc.js
 
 game-gcd:
-	npx babel-node src/bin/brain-gcd.js	
+	npx babel-node src/bin/brain-gcd.js
+
+game-progression:
+	npx babel-node src/bin/brain-progression.js		
 
 publish:
 	npm publish
