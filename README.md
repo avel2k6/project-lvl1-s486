@@ -31,3 +31,7 @@ sudo npm install -g braingames-avel2k6
 ## Brain-progression
 
 [![asciicast](https://asciinema.org/a/hY1NiM5u5LAkQ2zWNEOF0Lt3n.svg)](https://asciinema.org/a/hY1NiM5u5LAkQ2zWNEOF0Lt3n)
+
+## Brain-prime
+
+[![asciicast](https://asciinema.org/a/xqxRg326oswroUF4VXB0Iqnl3.svg)](https://asciinema.org/a/xqxRg326oswroUF4VXB0Iqnl3)
