@@ -1,13 +1,16 @@
-import {
-  makeGame, random,
-} from '..';
+import makeGame from '..';
+import random from '../utils';
 
-const evenQuestion = () => { // Проверка четности: если правильно угадана, возвращаем true
-  const targetNumber = random(30);
-  const targetAnswer = targetNumber % 2 === 0 ? 'yes' : 'no';
-  return [targetNumber, targetAnswer];
+const isEven = number => (number % 2 === 0 ? 'yes' : 'no');
+
+const evenQuestion = () => {
+  const question = random(30);
+  const answer = isEven(question);
+  return [question, answer];
 };
 
-const evenGame = () => makeGame(evenQuestion, 'Answer "yes" if number even otherwise answer "no"');
+const gameDescription = 'Answer "yes" if number even otherwise answer "no"';
+
+const evenGame = () => makeGame(evenQuestion, gameDescription);
 
 export default evenGame;

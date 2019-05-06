@@ -1,24 +1,26 @@
-import {
-  makeGame, random,
-} from '..';
+import makeGame from '..';
+import random from '../utils';
 
 const progressionQuestion = () => { // Поиск НОД: если правильно угадано, возвращаем true
   const start = random(30);
-  const step = random(10);
-  const position = random(9);
-  let str = '';
-  let target = 0;
-  for (let i = 0; i <= 10; i += 1) {
-    if (i === position) {
-      str = `${str} ..`;
-      target = start + i * step;
+  const step = random(10, -10);
+  const progressionLenght = 10;
+  const position = random(progressionLenght);
+  let question = '';
+  let answer = 0;
+  for (let progressionStep = 0; progressionStep <= progressionLenght; progressionStep += 1) {
+    if (progressionStep === position) {
+      question = `${question} ..`;
+      answer = start + progressionStep * step;
     } else {
-      str = `${str} ${start + i * step}`;
+      question = `${question} ${start + progressionStep * step}`;
     }
   }
-  return [str, target];
+  question = question.trim();
+  return [question, answer];
 };
+const gameDescription = 'What number is missing in the progression?';
 
-const progressionGame = () => makeGame(progressionQuestion, 'Find the greatest common divisor of given numbers.');
+const progressionGame = () => makeGame(progressionQuestion, gameDescription);
 
 export default progressionGame;
