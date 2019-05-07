@@ -1,21 +1,9 @@
 import makeGame from '..';
 import random from '../utils';
 
-const summ = (x, y) => {
-  const question = `${x} + ${y}`;
-  const answer = x + y;
-  return [question, answer];
-};
-const mult = (x, y) => {
-  const question = `${x} * ${y}`;
-  const answer = x * y;
-  return [question, answer];
-};
-const diff = (x, y) => {
-  const question = `${x} - ${y}`;
-  const answer = x - y;
-  return [question, answer];
-};
+const summ = (x, y) => [`${x} + ${y}`, x + y];
+const mult = (x, y) => [`${x} * ${y}`, x * y];
+const diff = (x, y) => [`${x} - ${y}`, x - y];
 
 const calcQuestion = () => {
   const number1 = random(10, -5);
