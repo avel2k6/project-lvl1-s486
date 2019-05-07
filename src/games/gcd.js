@@ -3,7 +3,7 @@ import random from '../utils';
 
 // Алгоритм Евклида для нахождения НОД
 const divider = (n1, n2) => ((n1 === 0 || n2 === 0)
-  ? n1 + n2
+  ? `${n1 + n2}`
   : divider(Math.max(n1, n2) % Math.min(n1, n2), Math.min(n1, n2)));
 
 const gcdQuestion = () => {
@@ -15,6 +15,4 @@ const gcdQuestion = () => {
 };
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const gcdGame = () => makeGame(gcdQuestion, gameDescription);
-
-export default gcdGame;
+export default () => makeGame(gcdQuestion, gameDescription);

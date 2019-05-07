@@ -2,11 +2,13 @@ import makeGame from '..';
 import random from '../utils';
 
 const isPrime = (num) => {
-  const checkPrime = (x, acc) => {
-    if (x === acc) return true;
-    return (x % acc === 0 || x < 2) ? false : checkPrime(x, acc + 1);
-  };
-  return checkPrime(num, 2);
+  if (num < 2) return false;
+  for (let divider = 2; divider < num; divider += 1) {
+    if (num % divider === 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
 const primeQuestion = () => {
@@ -16,6 +18,4 @@ const primeQuestion = () => {
 };
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeGame = () => makeGame(primeQuestion, gameDescription);
-
-export default primeGame;
+export default () => makeGame(primeQuestion, gameDescription);

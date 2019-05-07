@@ -1,6 +1,6 @@
 {
   "name": "braingames-avel2k6",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "hexlet project lvl1",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

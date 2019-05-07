@@ -23,14 +23,14 @@ const ask = (questionData) => { // Задаем вопрос на основе �
 
 const makeGame = (questionData, rules) => { // Основной игровой движок
   const userName = startGame(rules);
-  for (let round = 1; round <= 3; round += 1) {
-    if (ask(questionData()) === false) { // Если ответ неверен, завершаем опрос
+  for (let gameRound = 1; gameRound <= 3; gameRound += 1) {
+    const isWin = ask(questionData());
+    if (isWin === false) { // Если ответ неверен, завершаем опрос
       console.log(`Let's try again, ${userName}!`);
-      return undefined;
+      return;
     }
   }
   console.log(`Congratulations, ${userName}!`);
-  return undefined;
 };
 
 export default makeGame;
