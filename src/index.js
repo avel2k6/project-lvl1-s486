@@ -13,7 +13,7 @@ const ask = (questionData) => { // Задаем вопрос на основе �
   const [qestion, answer] = questionData;
   console.log(`Question: ${qestion}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  if (`${answer}` === userAnswer) {
+  if (answer === userAnswer) {
     console.log('Correct!');
     return true;
   }
