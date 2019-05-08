@@ -3,7 +3,8 @@ import random from '../utils';
 
 const isPrime = (num) => {
   if (num < 2) return false;
-  for (let divider = 2; divider < num; divider += 1) {
+  const maxDivider = num / 2;
+  for (let divider = 2; divider < maxDivider; divider += 1) {
     if (num % divider === 0) {
       return false;
     }

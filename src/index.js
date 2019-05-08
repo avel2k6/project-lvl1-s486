@@ -1,16 +1,6 @@
 import readlineSync from 'readline-sync';
 
-// Bin functions
-const startGame = (rules = '') => { // Приветствуем пользователя и показывае правила игры, если они заданы
-  console.log('Welcome to the Brain Games!');
-  console.log(rules);
-  const userName = readlineSync.question('May I have your name?: ');
-  console.log(`Hello, ${userName}`);
-  return userName;
-};
-
-const ask = (questionData) => { // Задаем вопрос на основе входящей функции
-  const [qestion, answer] = questionData;
+const ask = (qestion, answer) => { // Задаем вопрос пользователю на основе входящих данных
   console.log(`Question: ${qestion}`);
   const userAnswer = readlineSync.question('Your answer: ');
   if (answer === userAnswer) {
@@ -22,10 +12,15 @@ const ask = (questionData) => { // Задаем вопрос на основе �
 };
 
 const makeGame = (questionData, rules) => { // Основной игровой движок
-  const userName = startGame(rules);
-  for (let gameRound = 1; gameRound <= 3; gameRound += 1) {
-    const isWin = ask(questionData());
-    if (isWin === false) { // Если ответ неверен, завершаем опрос
+  console.log('Welcome to the Brain Games!');
+  console.log(rules);
+  const userName = readlineSync.question('May I have your name?: ');
+  console.log(`Hello, ${userName}`);
+  const roundsCount = 3;
+  for (let i = 1; i <= roundsCount; i += 1) {
+    const [qestion, answer] = questionData();
+    const isWin = ask(qestion, answer);
+    if (!isWin) { // Если ответ неверен, завершаем опрос
       console.log(`Let's try again, ${userName}!`);
       return;
     }
