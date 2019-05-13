@@ -4,7 +4,7 @@ import random from '../utils';
 const isPrime = (num) => {
   if (num < 2) return false;
   const maxDivider = num / 2;
-  for (let divider = 2; divider < maxDivider; divider += 1) {
+  for (let divider = 2; divider <= maxDivider; divider += 1) {
     if (num % divider === 0) {
       return false;
     }
@@ -13,7 +13,7 @@ const isPrime = (num) => {
 };
 
 const primeQuestion = () => {
-  const question = random(30);
+  const question = random(20,-5);
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
